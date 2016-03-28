@@ -57,16 +57,21 @@
 
 
 
-<meta name="description" content="代码折叠1234&quot; 设置了代码折叠以后，可用在normal模式下用za来折叠/展开代码set foldmethod=indent &quot;根据缩进折叠set foldlevel=100 &quot;启动vim时不要自动缩进代码noremap &amp;lt;space&amp;gt; za &quot;用空格进行折叠">
+<meta name="description" content="作为一个经常在服务端上做开发的人，难免需要调试服务器上的代码，以前采用的办法是，在代码中加入大量的log，然后通过查看日志文件来寻找问题，后来知道了其实远程登录的情况下也是可以打开图形界面的，于是在服务器上装了相关的IDE，然后进行单步调试，但是这样感觉会很慢，再后来忍无可忍，就寻找了新的办法，发现IDEA可以直接进行远程调试，当时感觉很神奇……">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim常用配置">
-<meta property="og:url" content="http://cen5bin.me/2016/03/23/vim常用配置/index.html">
+<meta property="og:title" content="IDEA远程调试代码">
+<meta property="og:url" content="http://cen5bin.me/2016/03/28/IDEA远程调试代码/index.html">
 <meta property="og:site_name" content="Pursuit">
-<meta property="og:description" content="代码折叠1234&quot; 设置了代码折叠以后，可用在normal模式下用za来折叠/展开代码set foldmethod=indent &quot;根据缩进折叠set foldlevel=100 &quot;启动vim时不要自动缩进代码noremap &amp;lt;space&amp;gt; za &quot;用空格进行折叠">
-<meta property="og:updated_time" content="2016-03-23T08:26:50.000Z">
+<meta property="og:description" content="作为一个经常在服务端上做开发的人，难免需要调试服务器上的代码，以前采用的办法是，在代码中加入大量的log，然后通过查看日志文件来寻找问题，后来知道了其实远程登录的情况下也是可以打开图形界面的，于是在服务器上装了相关的IDE，然后进行单步调试，但是这样感觉会很慢，再后来忍无可忍，就寻找了新的办法，发现IDEA可以直接进行远程调试，当时感觉很神奇……">
+<meta property="og:image" content="http://7xsczt.com1.z0.glb.clouddn.com/2016-03-28-QQ20160328-1.png">
+<meta property="og:image" content="http://7xsczt.com1.z0.glb.clouddn.com/2016-03-28-QQ20160328-2.png">
+<meta property="og:image" content="http://7xsczt.com1.z0.glb.clouddn.com/2016-03-28-QQ20160328-3.png">
+<meta property="og:image" content="http://7xsczt.com1.z0.glb.clouddn.com/2016-03-28-QQ20160328-4.png">
+<meta property="og:updated_time" content="2016-03-28T08:39:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vim常用配置">
-<meta name="twitter:description" content="代码折叠1234&quot; 设置了代码折叠以后，可用在normal模式下用za来折叠/展开代码set foldmethod=indent &quot;根据缩进折叠set foldlevel=100 &quot;启动vim时不要自动缩进代码noremap &amp;lt;space&amp;gt; za &quot;用空格进行折叠">
+<meta name="twitter:title" content="IDEA远程调试代码">
+<meta name="twitter:description" content="作为一个经常在服务端上做开发的人，难免需要调试服务器上的代码，以前采用的办法是，在代码中加入大量的log，然后通过查看日志文件来寻找问题，后来知道了其实远程登录的情况下也是可以打开图形界面的，于是在服务器上装了相关的IDE，然后进行单步调试，但是这样感觉会很慢，再后来忍无可忍，就寻找了新的办法，发现IDEA可以直接进行远程调试，当时感觉很神奇……">
+<meta name="twitter:image" content="http://7xsczt.com1.z0.glb.clouddn.com/2016-03-28-QQ20160328-1.png">
 
 
 
@@ -84,7 +89,7 @@
   };
 </script>
 
-  <title> vim常用配置 | Pursuit </title>
+  <title> IDEA远程调试代码 | Pursuit </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -157,6 +162,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -214,7 +229,7 @@
             
             
               
-                vim常用配置
+                IDEA远程调试代码
               
             
           </h1>
@@ -226,19 +241,38 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-23T07:50:40+00:00" content="2016-03-23">
-              2016-03-23
+            <time itemprop="dateCreated" datetime="2016-03-28T00:39:11+00:00" content="2016-03-28">
+              2016-03-28
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/效率/" itemprop="url" rel="index">
+                    <span itemprop="name">效率</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/23/vim常用配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/23/vim常用配置/" itemprop="commentsCount"></span>
+                <a href="/2016/03/28/IDEA远程调试代码/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/28/IDEA远程调试代码/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -248,7 +282,7 @@
 
           
           
-             <span id="/2016/03/23/vim常用配置/" class="leancloud_visitors" data-flag-title="vim常用配置">
+             <span id="/2016/03/28/IDEA远程调试代码/" class="leancloud_visitors" data-flag-title="IDEA远程调试代码">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -269,7 +303,17 @@
       
 
       
-        <h3 id="代码折叠"><a href="#代码折叠" class="headerlink" title="代码折叠"></a>代码折叠</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">" 设置了代码折叠以后，可用在normal模式下用za来折叠/展开代码</span></span><br><span class="line"><span class="keyword">set</span> foldmethod=<span class="built_in">indent</span> <span class="comment">"根据缩进折叠</span></span><br><span class="line"><span class="keyword">set</span> <span class="built_in">foldlevel</span>=<span class="number">100</span> <span class="comment">"启动vim时不要自动缩进代码</span></span><br><span class="line"><span class="keyword">noremap</span> <span class="symbol">&lt;space&gt;</span> za <span class="comment">"用空格进行折叠</span></span><br></pre></td></tr></table></figure>
+        <p>作为一个经常在服务端上做开发的人，难免需要调试服务器上的代码，以前采用的办法是，在代码中加入大量的log，然后通过查看日志文件来寻找问题，后来知道了其实远程登录的情况下也是可以打开图形界面的，于是在服务器上装了相关的IDE，然后进行单步调试，但是这样感觉会很慢，再后来忍无可忍，就寻找了新的办法，发现IDEA可以直接进行远程调试，当时感觉很神奇……<br><a id="more"></a></p>
+<h2 id="JVM参数设置"><a href="#JVM参数设置" class="headerlink" title="JVM参数设置"></a>JVM参数设置</h2><p>只有在启动java程序时设定相应的参数，才可以支持远程调试，参数如下，address后面的表示端口号，这里我设置了9999，除了这个端口号，其他都不用改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=9999,suspend=y</span><br></pre></td></tr></table></figure>
+<h2 id="IDEA设置"><a href="#IDEA设置" class="headerlink" title="IDEA设置"></a>IDEA设置</h2><ol>
+<li>先在工具栏上找到一个下拉菜单，然后选择“Edit Configurations”，或者在“Run”菜单下面也可以找到 <center><img src="http://7xsczt.com1.z0.glb.clouddn.com/2016-03-28-QQ20160328-1.png" alt="QQ20160328-1"></center></li>
+<li>增加一个配置，选择remote<br><img src="http://7xsczt.com1.z0.glb.clouddn.com/2016-03-28-QQ20160328-2.png" alt="QQ20160328-2"></li>
+<li>设置相关的参数，包括服务器的ip，以及debug的端口号，端口号要和jvm参数中的对应<br><img src="http://7xsczt.com1.z0.glb.clouddn.com/2016-03-28-QQ20160328-3.png" alt="QQ20160328-3"></li>
+<li>点击OK即可</li>
+</ol>
+<h2 id="开始调试"><a href="#开始调试" class="headerlink" title="开始调试"></a>开始调试</h2><p>如下图所示，之前设置的configuration已经生效了</p>
+<p><center><img src="http://7xsczt.com1.z0.glb.clouddn.com/2016-03-28-QQ20160328-4.png" alt="QQ20160328-4"></center><br>在服务器上启动需要调试的程序（带上jvm参数），然后在本地的IDEA中点击上图中的虫子，即可<br>具体的调试，如何加断点，单步，查看变量值就不介绍了</p>
 
       
     </div>
@@ -293,17 +337,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/23/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/03/25/samba服务器配置和使用/" rel="next" title="samba服务器配置和使用">
+                <i class="fa fa-chevron-left"></i> samba服务器配置和使用
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/23/redis快速入门/" rel="prev" title="redis快速入门">
-                redis快速入门 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -318,10 +358,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/03/23/vim常用配置/"
-     data-title="vim常用配置"
+        <div class="ds-share flat" data-thread-key="2016/03/28/IDEA远程调试代码/"
+     data-title="IDEA远程调试代码"
      data-content=""
-     data-url="http://cen5bin.me/2016/03/23/vim常用配置/">
+     data-url="http://cen5bin.me/2016/03/28/IDEA远程调试代码/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -348,8 +388,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/23/vim常用配置/"
-           data-title="vim常用配置" data-url="http://cen5bin.me/2016/03/23/vim常用配置/">
+      <div class="ds-thread" data-thread-key="2016/03/28/IDEA远程调试代码/"
+           data-title="IDEA远程调试代码" data-url="http://cen5bin.me/2016/03/28/IDEA远程调试代码/">
       </div>
     
   </div>
@@ -394,17 +434,24 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -438,7 +485,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码折叠"><span class="nav-number">1.</span> <span class="nav-text">代码折叠</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM参数设置"><span class="nav-number">1.</span> <span class="nav-text">JVM参数设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDEA设置"><span class="nav-number">2.</span> <span class="nav-text">IDEA设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始调试"><span class="nav-number">3.</span> <span class="nav-text">开始调试</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
