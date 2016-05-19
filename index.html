@@ -226,6 +226,129 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/19/mysql修改数据存储路径datadir/" itemprop="url">
+                  mysql修改数据存储路径datadir
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-19T04:21:33+00:00" content="2016-05-19">
+              2016-05-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/19/mysql修改数据存储路径datadir/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/19/mysql修改数据存储路径datadir/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/19/mysql修改数据存储路径datadir/" class="leancloud_visitors" data-flag-title="mysql修改数据存储路径datadir">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>mysql数据存储的默认路径是/var/lib/mysql，如果在安装系统的时候，这个路径所在分区不够大，那么就会留下一些隐患。如果遇到了磁盘占满的情况，就需要迁移数据了。只需按照以下的顺序做相应的操作：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysqld stop # 停止mysql</span><br><span class="line">sudo cp -R -p /var/lib/mysql /path/to/data # 迁移数据到新目录，并保留了目录的权限</span><br></pre></td></tr></table></figure><p>修改mysql配置文件/etc/mysql/my.cnf(这是默认路径，如果是用户自己手动安装的，可以去找到相应的配置文件)<br>将其中的datadir=/var/lib/mysql改成</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">datadir=/path/to/data</span><br></pre></td></tr></table></figure><p>然后修改文件/etc/apparmor.d/usr.sbin.mysqld，修改其中的两行：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/var/lib/mysql/ r,</span><br><span class="line">/var/lib/mysql/** rwk</span><br></pre></td></tr></table></figure><p>改成：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/path/to/data/ r,</span><br><span class="line">/path/to/data/** rwk</span><br></pre></td></tr></table></figure><p>然后执行：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/apparmor reload</span><br></pre></td></tr></table></figure><p>最后启动mysql：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mysqld start</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/16/Mac下使用shadowsocks解决docker被墙问题/" itemprop="url">
                   Mac下使用shadowsocks解决docker被墙问题
                 </a>
@@ -741,7 +864,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-23T20:02:40+08:00" content="2016-03-23">
+            <time itemprop="dateCreated" datetime="2016-03-23T12:02:40+00:00" content="2016-03-23">
               2016-03-23
             </time>
           </span>
@@ -867,7 +990,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-23T10:51:20+08:00" content="2016-03-23">
+            <time itemprop="dateCreated" datetime="2016-03-23T02:51:20+00:00" content="2016-03-23">
               2016-03-23
             </time>
           </span>
@@ -977,7 +1100,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -994,7 +1117,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
